@@ -30,6 +30,72 @@ namespace WpfApp_Labs
             Lab_1.Lab_1 window = new Lab_1.Lab_1();
             window.Show();
         }
+
+        private void Button_2_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_2.Lab_2 window = new Lab_2.Lab_2();
+            window.Show();
+        }
+
+        private void Button_3_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_3.Lab_3 window = new Lab_3.Lab_3();
+            window.Show();
+        }
+
+        private void Button_4_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_4.Lab_4 window = new Lab_4.Lab_4();
+            window.Show();
+        }
+
+        private void Button_5_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_5.Lab_5 window = new Lab_5.Lab_5();
+            window.Show();
+        }
+
+        private void Button_6_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_6.Lab_6 window = new Lab_6.Lab_6();
+            window.Show();
+        }
+
+        private void Button_7_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_7.Lab_7 window = new Lab_7.Lab_7();
+            window.Show();
+        }
+
+        private void Button_8_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_8.Lab_8 window = new Lab_8.Lab_8();
+            window.Show();
+        }
+
+        private void Button_9_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_9.Lab_9 window = new Lab_9.Lab_9();
+            window.Show();
+        }
+
+        private void Button_10_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_10.Lab_10 window = new Lab_10.Lab_10();
+            window.Show();
+        }
+
+        private void Button_11_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_11.Lab_11 window = new Lab_11.Lab_11();
+            window.Show();
+        }
+
+        private void Button_12_Click(object sender, RoutedEventArgs e)
+        {
+            Lab_12.Lab_12 window = new Lab_12.Lab_12();
+            window.Show();
+        }
     }
 
     /// <summary>
