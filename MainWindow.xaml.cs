@@ -155,7 +155,9 @@ namespace WpfApp_Labs
                 if (i % n == 0 && i % m == 0)
                     result += $"{i} ";
             }
-            return result;
+            if (result != null)
+                return result;
+            return "Таких значений нет";
         }
 
         public static string Lab_5()

@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_4"
         mc:Ignorable="d"
-        Title="Lab_4" Height="450" Width="800">
+        Title="Лабораторная работа №4" Height="275" Width="376">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Даны натуральные числа m и n. Получить все кратные им числа, меньшие m*n и отобразить на отдельной форме. " VerticalAlignment="Top" Width="348" Margin="10,10,0,0"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="44" Margin="10,85,0,0" TextWrapping="Wrap" Text="Число n" VerticalAlignment="Top" Width="168" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Вывести результат" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
+        <Label x:Name="Label" Content="Введите числа" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,177,0,0" Width="348" HorizontalContentAlignment="Center" Height="32"/>
+        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="44" Margin="190,85,0,0" TextWrapping="Wrap" Text="Число m" VerticalAlignment="Top" Width="168" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
     </Grid>
 </Window>
