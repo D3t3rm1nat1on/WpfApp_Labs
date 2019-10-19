@@ -23,5 +23,18 @@ namespace WpfApp_Labs.Lab_1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int a, b;
+            if(int.TryParse(TextBox1.Text, out a) && int.TryParse(TextBox2.Text, out b))
+            {
+                Label.Content = Function.Lab_1(a, b);
+            }
+            else
+            {
+                Label.Content = "Ошибка ввода";
+            }
+        }
     }
 }

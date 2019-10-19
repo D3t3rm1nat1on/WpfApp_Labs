@@ -105,16 +105,16 @@ namespace WpfApp_Labs
     {
         public static string Lab_1(int a, int b)
         {
-            string result = null;
+            int sum = 0;
             int max = Math.Max(a, b);
             int min = Math.Max(0, Math.Min(a, b));
 
             for (int i = min; i <= max; i += 4)
             {
-                result += $"{i} ";
+                sum += i;
             }
 
-            return result;
+            return sum.ToString();
         }
 
         public static string Lab_2(string str)
