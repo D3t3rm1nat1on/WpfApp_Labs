@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp_Labs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Labs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Лабораторная работа 1" HorizontalAlignment="Left" Margin="217,128,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 2" HorizontalAlignment="Left" Margin="217,165,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 3" HorizontalAlignment="Left" Margin="217,202,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 4" HorizontalAlignment="Left" Margin="217,239,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 5" HorizontalAlignment="Left" Margin="217,276,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 6" HorizontalAlignment="Left" Margin="217,313,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 7" HorizontalAlignment="Left" Margin="403,128,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 8" HorizontalAlignment="Left" Margin="403,165,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 9" HorizontalAlignment="Left" Margin="403,202,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 10" HorizontalAlignment="Left" Margin="403,239,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 11" HorizontalAlignment="Left" Margin="403,276,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 12" HorizontalAlignment="Left" Margin="403,313,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+
+    </Grid>
+</Window>
