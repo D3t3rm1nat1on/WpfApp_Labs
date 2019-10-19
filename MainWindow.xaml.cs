@@ -133,7 +133,7 @@ namespace WpfApp_Labs
             return sum.ToString();
         }
 
-        public static string Lab_3(uint a)
+        public static string Lab_3(int a)
         {
             string result = null;
             for (int i = 1; i <= a; i++)

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,36 @@ namespace WpfApp_Labs.Lab_3
         public Lab_3()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string res = null;
+            int n;
+            if (int.TryParse(TextBox.Text, out n) && n > 0)
+            {
+                res = Function.Lab_3(n);
+                Label.Content = res;
+            }
+            else
+            {
+                Label.Content = "Ошибка ввода";
+            }
+
+
+            Dialog_Window window = new Dialog_Window();
+
+            if (window.ShowDialog() == true)
+            {
+                StreamWriter writer = new StreamWriter("C:\\Users\\Usver\\source\\repos\\WpfApp_Labs\\Lab_3\\output.txt");
+                writer.Write(res);
+                MessageBox.Show("Запись произведена успешно");
+                writer.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ну как хотите");
+            }
         }
     }
 }

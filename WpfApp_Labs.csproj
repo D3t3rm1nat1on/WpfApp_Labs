@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Lab_3\Dialog_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lab_3\Lab_3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +129,9 @@
     </Compile>
     <Compile Include="Lab_2\Lab_2.xaml.cs">
       <DependentUpon>Lab_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_3\Dialog_Window.xaml.cs">
+      <DependentUpon>Dialog_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lab_3\Lab_3.xaml.cs">
       <DependentUpon>Lab_3.xaml</DependentUpon>
@@ -178,6 +185,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Lab_3\output.txt">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
