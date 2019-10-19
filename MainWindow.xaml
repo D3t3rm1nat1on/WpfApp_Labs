@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Лабораторная работа 1" HorizontalAlignment="Left" Margin="217,128,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 2" HorizontalAlignment="Left" Margin="217,165,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 3" HorizontalAlignment="Left" Margin="217,202,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 4" HorizontalAlignment="Left" Margin="217,239,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 5" HorizontalAlignment="Left" Margin="217,276,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 6" HorizontalAlignment="Left" Margin="217,313,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 7" HorizontalAlignment="Left" Margin="403,128,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 8" HorizontalAlignment="Left" Margin="403,165,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 9" HorizontalAlignment="Left" Margin="403,202,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 10" HorizontalAlignment="Left" Margin="403,239,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 11" HorizontalAlignment="Left" Margin="403,276,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
-        <Button Content="Лабораторная работа 12" HorizontalAlignment="Left" Margin="403,313,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 1" HorizontalAlignment="Left" Margin="213,103,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 2" HorizontalAlignment="Left" Margin="213,140,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 3" HorizontalAlignment="Left" Margin="213,177,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 4" HorizontalAlignment="Left" Margin="213,214,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 5" HorizontalAlignment="Left" Margin="213,251,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 6" HorizontalAlignment="Left" Margin="213,288,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 7" HorizontalAlignment="Left" Margin="399,103,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 8" HorizontalAlignment="Left" Margin="399,140,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 9" HorizontalAlignment="Left" Margin="399,177,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 10" HorizontalAlignment="Left" Margin="399,214,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 11" HorizontalAlignment="Left" Margin="399,251,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button Content="Лабораторная работа 12" HorizontalAlignment="Left" Margin="399,288,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
 
     </Grid>
 </Window>
