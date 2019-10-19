@@ -94,5 +94,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lab_10\" />
+    <Folder Include="Lab_11\" />
+    <Folder Include="Lab_12\" />
+    <Folder Include="Lab_1\" />
+    <Folder Include="Lab_2\" />
+    <Folder Include="Lab_3\" />
+    <Folder Include="Lab_4\" />
+    <Folder Include="Lab_5\" />
+    <Folder Include="Lab_6\" />
+    <Folder Include="Lab_7\" />
+    <Folder Include="Lab_8\" />
+    <Folder Include="Lab_9\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
