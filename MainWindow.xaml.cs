@@ -24,5 +24,10 @@ namespace WpfApp_Labs
         {
             InitializeComponent();
         }
+
+        private void Button_1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

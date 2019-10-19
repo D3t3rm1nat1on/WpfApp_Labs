@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Лабораторная работа 1" HorizontalAlignment="Left" Margin="213,103,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
+        <Button x:Name="Button_1" Content="Лабораторная работа 1" HorizontalAlignment="Left" Margin="213,103,0,0" VerticalAlignment="Top" Width="181" Height="32" Click="Button_1_Click"/>
         <Button Content="Лабораторная работа 2" HorizontalAlignment="Left" Margin="213,140,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
         <Button Content="Лабораторная работа 3" HorizontalAlignment="Left" Margin="213,177,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
         <Button Content="Лабораторная работа 4" HorizontalAlignment="Left" Margin="213,214,0,0" VerticalAlignment="Top" Width="181" Height="32"/>
