@@ -23,5 +23,29 @@ namespace WpfApp_Labs.Lab_2
         {
             InitializeComponent();
         }
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string str = TextBox.Text.Trim();
+            if (!str.Any(char.IsDigit))
+            {
+                Label.Content = "Ошибка ввода";
+                return;
+            }
+            while (str.Contains("  "))
+            {
+                str = str.Replace("  ", " ");
+            }
+            int[] mas = str.Split().Select(int.Parse).ToArray();
+            Label.Content = Function.Lab_2(mas);
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = (!char.IsDigit(e.Text, 0));
+        }
     }
 }

@@ -117,10 +117,9 @@ namespace WpfApp_Labs
             return sum.ToString();
         }
 
-        public static string Lab_2(string str)
+        public static string Lab_2(int[] mas)
         {
             int sum = 0;
-            int[] mas = str.Split().Select(int.Parse).ToArray();
             foreach (var a in mas)
             {
                 if (a < 100 && a > 20 && a % 3 == 0)

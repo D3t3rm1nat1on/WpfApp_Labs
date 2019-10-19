@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_2"
         mc:Ignorable="d"
-        Title="Lab_2" Height="450" Width="800">
+        Title="Лабораторная работа №2" Height="275" Width="376">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Найти сумму целых положительных чисел, больших 20, меньших 100, кратных 3 и заканчивающихся на 2, 4 или 8. Числа записываются в текстовый элемент с клавиатуры в отдельную строку" VerticalAlignment="Top" Width="348" Margin="10,10,0,0"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="44" Margin="10,85,0,0" TextWrapping="Wrap" Text="Числа" VerticalAlignment="Top" Width="348" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <Button Content="Вывести результат" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
+        <Label x:Name="Label" Content="Результат" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,177,0,0" Width="348" HorizontalContentAlignment="Center" Height="32"/>
+
     </Grid>
 </Window>
