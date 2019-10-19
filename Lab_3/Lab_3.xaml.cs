@@ -38,6 +38,7 @@ namespace WpfApp_Labs.Lab_3
             else
             {
                 Label.Content = "Ошибка ввода";
+                return;
             }
 
 
@@ -45,9 +46,9 @@ namespace WpfApp_Labs.Lab_3
 
             if (window.ShowDialog() == true)
             {
-                StreamWriter writer = new StreamWriter("C:\\Users\\Usver\\source\\repos\\WpfApp_Labs\\Lab_3\\output.txt");
+                StreamWriter writer = new StreamWriter("output.txt");
                 writer.Write(res);
-                MessageBox.Show("Запись произведена успешно");
+                MessageBox.Show("Успешная запись в" + Environment.CurrentDirectory + "\\output.txt");
                 writer.Close();
             }
             else
