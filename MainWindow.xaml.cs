@@ -27,7 +27,8 @@ namespace WpfApp_Labs
 
         private void Button_1_Click(object sender, RoutedEventArgs e)
         {
-
+            Lab_1.Lab_1 window = new Lab_1.Lab_1();
+            window.Show();
         }
     }
 

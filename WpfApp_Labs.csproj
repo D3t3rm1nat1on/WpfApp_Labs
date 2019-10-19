@@ -55,7 +55,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Lab_10\Lab_10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_11\Lab_11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_12\Lab_12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lab_1\Lab_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_2\Lab_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_3\Lab_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_4\Lab_4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_5\Lab_5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_6\Lab_6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_7\Lab_7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_8\Lab_8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lab_9\Lab_9.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,8 +111,41 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Lab_10\Lab_10.xaml.cs">
+      <DependentUpon>Lab_10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_11\Lab_11.xaml.cs">
+      <DependentUpon>Lab_11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_12\Lab_12.xaml.cs">
+      <DependentUpon>Lab_12.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Lab_1\Lab_1.xaml.cs">
       <DependentUpon>Lab_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_2\Lab_2.xaml.cs">
+      <DependentUpon>Lab_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_3\Lab_3.xaml.cs">
+      <DependentUpon>Lab_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_4\Lab_4.xaml.cs">
+      <DependentUpon>Lab_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_5\Lab_5.xaml.cs">
+      <DependentUpon>Lab_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_6\Lab_6.xaml.cs">
+      <DependentUpon>Lab_6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_7\Lab_7.xaml.cs">
+      <DependentUpon>Lab_7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_8\Lab_8.xaml.cs">
+      <DependentUpon>Lab_8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_9\Lab_9.xaml.cs">
+      <DependentUpon>Lab_9.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -101,18 +178,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lab_10\" />
-    <Folder Include="Lab_11\" />
-    <Folder Include="Lab_12\" />
-    <Folder Include="Lab_2\" />
-    <Folder Include="Lab_3\" />
-    <Folder Include="Lab_4\" />
-    <Folder Include="Lab_5\" />
-    <Folder Include="Lab_6\" />
-    <Folder Include="Lab_7\" />
-    <Folder Include="Lab_8\" />
-    <Folder Include="Lab_9\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

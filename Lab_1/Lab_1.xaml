@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Lab_1" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Найти сумму целых положительных чисел из промежутка от a до b, кратных 4. На форме должны быть 2 элемента для ввода числа с клавиатуры." VerticalAlignment="Top" Height="60" Width="792" Background="AliceBlue"/>
+
     </Grid>
 </Window>
