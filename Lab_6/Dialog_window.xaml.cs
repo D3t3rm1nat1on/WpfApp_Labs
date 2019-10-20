@@ -12,21 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WpfApp_Labs.Lab_5
+namespace WpfApp_Labs.Lab_6
 {
     /// <summary>
-    /// Логика взаимодействия для Lab_5.xaml
+    /// Логика взаимодействия для Dialog_window.xaml
     /// </summary>
-    public partial class Lab_5 : Window
+    public partial class Dialog_window : Window
     {
-        public Lab_5()
+        public Dialog_window()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Yes_Click(object sender, RoutedEventArgs e)
         {
+            this.DialogResult = true;
+        }
 
+        private void Button_No_Click(object sender, RoutedEventArgs e)
+        {
+            this.DialogResult = false;
         }
     }
 }

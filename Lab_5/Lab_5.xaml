@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_5"
         mc:Ignorable="d"
-        Title="Lab_5" Height="450" Width="800">
+        Title="Лабораторная работа №5" Height="397.407" Width="376">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Сумма цифр трехзначного числа кратна 7, само число также делиться на 7. Найти все такие числа и вывести их внутри TableLayoutPanel." VerticalAlignment="Top" Width="348" Margin="10,10,0,0"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="44" Margin="10,85,0,0" TextWrapping="Wrap" Text="Число" VerticalAlignment="Top" Width="348" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Вывести результат" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
+        <Grid HorizontalAlignment="Left" Height="179" VerticalAlignment="Top" Width="348" Margin="10,177,0,0"/>
+
     </Grid>
 </Window>
