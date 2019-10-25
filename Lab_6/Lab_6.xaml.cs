@@ -43,8 +43,8 @@ namespace WpfApp_Labs.Lab_6
                 {
                     StreamWriter writer = new StreamWriter("result.txt");
                     writer.Write(str);
-                    MessageBox.Show("Успешная запись в\n" + Environment.CurrentDirectory + "\\result.txt");
                     writer.Close();
+                    MessageBox.Show("Успешная запись в\n" + Environment.CurrentDirectory + "\\result.txt");
                     Label.Content = "Запись произведена успешно";
                 }
                 else

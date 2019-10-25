@@ -169,7 +169,7 @@ namespace WpfApp_Labs
                 {
                     for (int c = 0; c < 10; c++)
                     {
-                        if (a + b + c == 7 && (a * 100 + b * 10 + c) % 7 == 0)
+                        if ((a + b + c) % 7 == 0 && (a * 100 + b * 10 + c) % 7 == 0)
                         {
                             result += $"{a * 100 + b * 10 + c} ";
                         }
