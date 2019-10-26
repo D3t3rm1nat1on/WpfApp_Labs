@@ -113,7 +113,7 @@ namespace WpfApp_Labs.Lab_7
 
         private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Вы уверены?", "Закрытие формы", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
                 e.Cancel = false;
             else
