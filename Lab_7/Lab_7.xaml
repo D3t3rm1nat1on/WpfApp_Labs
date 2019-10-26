@@ -5,12 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_7"
         mc:Ignorable="d"
+        Closing="OnClosing"
         Title="Лабораторная работа №7" Height="304" Width="376">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Считать файл через диалог. В файле записаны карточки студентов (фио, возраст, пол, специальность, курс). Создать в форме для каждого студента элементы вышеперечисленных полей. Каждый элемент может быть изменен. Дать возможность сохранить изменения в файл. Формат текста в файле не важен. При выходе из программы спрашивать" VerticalAlignment="Top" Width="348" Margin="10,10,0,0"/>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="44" Margin="10,149,0,0" TextWrapping="Wrap" Text="Число" VerticalAlignment="Top" Width="348" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Вывести результат" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Width="348" Height="38"/>
-        <Label x:Name="Label" Content="Результат" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,241,0,0" Width="348" HorizontalContentAlignment="Center" Height="32"/>
+        <TextBlock TextWrapping="Wrap" Text="Считать файл через диалог. В файле записаны карточки студентов (фио, возраст, пол, специальность, курс). Создать в форме для каждого студента элементы вышеперечисленных полей. Каждый элемент может быть изменен. Дать возможность сохранить изменения в файл. Формат текста в файле не важен. При выходе из программы спрашивать Уверены ли вы?" Width="348" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Button Content="Вывести результат"  Margin="10,127,0,0" VerticalAlignment="Top" Height="38" Click="Button_Click" HorizontalAlignment="Left" Width="171" />
+        <Label x:Name="Label_Debug" HorizontalAlignment="Left" Margin="15,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="14.2,-5.15"/>
+        <Grid x:Name="Stud_Grid" HorizontalAlignment="Left" Height="auto" Margin="10,185,0,0" Width="auto" ShowGridLines="True" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="ФИО" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Stretch"/>
+            <Label Content="Возраст" Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Stretch"/>
+            <Label Content="Пол" Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
+            <Label Content="Специальность" Grid.Row="0" Grid.Column="3" HorizontalContentAlignment="Stretch"/>
+            <Label Content="Курс" Grid.Row="0" Grid.Column="4" HorizontalContentAlignment="Stretch"/>
+        </Grid>
+        <Button x:Name="Save" Content="Сохранить изменения" HorizontalAlignment="Left" Margin="186,127,0,0" VerticalAlignment="Top" Width="172" Height="38" Click="Save_Click"/>
 
     </Grid>
 </Window>

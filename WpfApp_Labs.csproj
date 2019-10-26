@@ -103,6 +103,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Lab_7\Dialog_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lab_7\Lab_7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +162,9 @@
     </Compile>
     <Compile Include="Lab_6\Lab_6.xaml.cs">
       <DependentUpon>Lab_6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_7\Dialog_Window.xaml.cs">
+      <DependentUpon>Dialog_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Lab_7\Lab_7.xaml.cs">
       <DependentUpon>Lab_7.xaml</DependentUpon>
