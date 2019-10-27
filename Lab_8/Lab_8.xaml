@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_8"
         mc:Ignorable="d"
-        Title="Lab_8" Height="450" Width="800">
+        Title="Лабораторная работа №8" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock TextWrapping="Wrap" Text="Сделать игру кто хочет стать миллионером. Вопросы и ответы считываются из файла (или множества файлов, как вам угодно). На форме 4 кнопки с текстом ответа и текст вопроса. Случаи с неправильным ответом или если пользователь ответил на 15 вопросов правильно обрабатывайте, но на свое усмотрение. Вопросов должно быть не меньше 15, и они не могут задаваться более одного раза" Width="772" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Grid HorizontalAlignment="Left" Height="230" Margin="10,179,0,0" VerticalAlignment="Top" Width="772">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="TextBlock" Grid.ColumnSpan="2" Text="Вопрос" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            <Button x:Name="Button1" Click="Button_Click" Grid.Column="0" Grid.Row="1">Вариант ответа 1</Button>
+            <Button x:Name="Button2" Click="Button_Click" Grid.Column="0" Grid.Row="2">Вариант ответа 2</Button>
+            <Button x:Name="Button3" Click="Button_Click" Grid.Column="1" Grid.Row="1">Вариант ответа 3</Button>
+            <Button x:Name="Button4" Click="Button_Click" Grid.Column="1" Grid.Row="2">Вариант ответа 4</Button>
+        </Grid>
+        <Label x:Name="Label_Score" Content="Текущий счет: 0" FontSize="16" Foreground="OrangeRed" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.099,0.188"/>
+
     </Grid>
 </Window>
