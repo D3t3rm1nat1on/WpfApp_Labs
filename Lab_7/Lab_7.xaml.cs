@@ -46,7 +46,7 @@ namespace WpfApp_Labs.Lab_7
 
                 for (int i = 1; i <= list.Count; i++)
                 {
-                    // каждую итерацию указываю на новый конструктор, ибо при попытка впихнуть один элемент не может быть в разных частях окна WPF
+                    // каждую итерацию указываю на новый конструктор, ибо при попытке впихнуть один элемент не может быть в разных частях окна WPF
                     if (Stud_Grid.RowDefinitions.Count <= list.Count)
                     {
                         RowDefinition rowDefinition = new RowDefinition();
