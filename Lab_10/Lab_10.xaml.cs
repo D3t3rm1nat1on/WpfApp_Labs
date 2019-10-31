@@ -91,11 +91,12 @@ namespace WpfApp_Labs.Lab_10
                 Directory.Delete(path);
             else
                 if (File.Exists(path))
+            {
                 File.Delete(path);
+                MessageBox.Show($"Успешное удаление {TextBox_Delete.Text.Trim()}");
+            }
             else
                 MessageBox.Show("Такой папки/файла не существует");
-
-            MessageBox.Show($"Успешное удаление {TextBox_Delete.Text.Trim()}");
             Button_Click(sender, e);
         }
 

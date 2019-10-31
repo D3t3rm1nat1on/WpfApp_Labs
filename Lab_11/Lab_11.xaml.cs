@@ -22,6 +22,7 @@ namespace WpfApp_Labs.Lab_11
         public Lab_11()
         {
             InitializeComponent();
+            WebBrowser.Navigate("http://google.com");
         }
     }
 }
