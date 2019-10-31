@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_10"
         mc:Ignorable="d"
-        Title="Lab_10" Height="450" Width="800">
+        Title="Лабораторная работа №10" Height="440.001" Width="376" SizeToContent="WidthAndHeight">
     <Grid>
-        
+        <TextBlock Background="AliceBlue" Margin="10,10,10,0" TextWrapping="Wrap" Text="Написать программу которая позволяет просматривать иерархию выбранной папки (с файлами), предусмотреть возможность добавления нового файла и папки а также удаления." VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_Path" Height="23" Margin="10,110,10,0" TextWrapping="Wrap" Text="C:\Users\Usver\source\repos\WpfApp_Labs\bin\Debug" VerticalAlignment="Top"/>
+        <Button Content="Выбрать директорию" Margin="10,138,10,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label x:Name="Label" Content="Введите путь к директории" Margin="10,79,10,0" VerticalAlignment="Top"/>
+        <Grid Margin="10,163,10,10" Background="LightSeaGreen">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid x:Name="Grid_Directory" Height="auto" Width="auto" ShowGridLines="True" Grid.Row="0" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+
+            </Grid>
+            <Grid x:Name="Grid_Actions" Height="auto" Width="auto" ShowGridLines="True" Visibility="Collapsed" Grid.Row="1" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="TextBox_Delete" Text="Имя удаляемой папки/файла" TextAlignment="Center" Grid.Row="0"/>
+                <Button x:Name="Button_Delete" Content="Удалить папку/файл" Grid.Row="1" Click="Button_Delete_Click"/>
+                <TextBox x:Name="TextBox_AddFile" Text="Имя добавляемого файла" TextAlignment="Center" Grid.Row="2"/>
+                <Button x:Name="Button_AddFile" Content="Создать файл" Grid.Row="3" Click="Button_AddFile_Click"/>
+                <TextBox x:Name="TextBox_AddDirectory" Text="Имя добавляемой папки" TextAlignment="Center" Grid.Row="4"/>
+                <Button x:Name="Button_AddDirectory" Content="Создать папку"  Grid.Row="5" Click="Button_AddDirectory_Click"/>
+            </Grid>
+        </Grid>
+
     </Grid>
 </Window>

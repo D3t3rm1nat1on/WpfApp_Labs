@@ -33,25 +33,32 @@ namespace WpfApp_Labs.Lab_9
             Dialog_Window dialog = new Dialog_Window();
             if (dialog.ShowDialog() == true)
             {
+                comboBoxItems.Clear();
+                show_images.Clear();
+                Image.Source = null;
+                ComboBox_Images.ItemsSource = null;
+                ComboBox_Images.Items.Clear();
+
                 string path = dialog.TextBox_Path.Text;
                 MessageBox.Show("Корректный путь");
-                string[] images = Directory.GetFiles(path, "*jpg", SearchOption.TopDirectoryOnly);
-                foreach (var image in images)
+                string[] images_paths = Directory.GetFiles(path, "*jpg", SearchOption.TopDirectoryOnly);
+                foreach (var iamge_path in images_paths)
                 {
                     TextBlock textBlock = new TextBlock();
-                    textBlock.Text = image.Substring(image.LastIndexOf('\\') + 1);
+                    textBlock.Text = iamge_path.Substring(iamge_path.LastIndexOf('\\') + 1);
+
                     Image temp_image = new Image();
-                    temp_image.Source = new BitmapImage(new Uri(image));
+                    temp_image.Source = new BitmapImage(new Uri(iamge_path));
                     show_images.Add(temp_image);
                     temp_image.Width = 60;
+
                     StackPanel stackPanel = new StackPanel();
                     stackPanel.Children.Add(temp_image);
                     stackPanel.Children.Add(textBlock);
-
                     comboBoxItems.Add(stackPanel);
                 }
-                ComboBox_Images.ItemsSource = comboBoxItems;
 
+                ComboBox_Images.ItemsSource = comboBoxItems;
             }
             else
             {
@@ -62,7 +69,9 @@ namespace WpfApp_Labs.Lab_9
         private void ComboBox_Images_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox comboBox = (ComboBox)sender;
-            Image.Source = show_images[comboBox.SelectedIndex].Source;
+            if (comboBox.SelectedIndex > -1)
+                Image.Source = show_images[comboBox.SelectedIndex].Source;
+
         }
     }
 }

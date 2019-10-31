@@ -14,9 +14,9 @@
             <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         
-        <TextBlock Background="AliceBlue" TextWrapping="Wrap" Text="Написать программу которая позволяет просматривать изображения в выбранной через диалог папке." Width="348" Height="32" Grid.Row="0"/>
+        <TextBlock x:Name="TextBlock" Background="AliceBlue" TextWrapping="Wrap" Text="Написать программу которая позволяет просматривать изображения в выбранной через диалог папке." Width="348" Height="32" Grid.Row="0"/>
         <Button Content="Выбрать путь к папке" Width="147" Click="Button_Click" Grid.Row="1"/>
-        <ComboBox x:Name="ComboBox_Images" Text="Выберите картинку" HorizontalAlignment="Left" VerticalAlignment="Top" Width="147" SelectionChanged="ComboBox_Images_SelectionChanged" Grid.Row="2"/>
+        <ComboBox x:Name="ComboBox_Images" Text="Выберите картинку" Width="147" SelectionChanged="ComboBox_Images_SelectionChanged" Grid.Row="2"/>
         <Image x:Name="Image" Height="auto" Width="auto" Grid.Row="3" MaxWidth= "376"/>
 
     </Grid>
