@@ -26,11 +26,13 @@ namespace WpfApp_Labs.Lab_4
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // Проверка - строки являются натуральными числами
             if (int.TryParse(TextBox1.Text, out int n) && int.TryParse(TextBox2.Text, out int m))
             {
                 Result_form window = new Result_form();
                 window.Label.Content = Function.Lab_4(n, m);
                 window.ShowDialog();
+                Label.Content = "Введите числа";
             }
             else
             {

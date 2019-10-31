@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_10"
         mc:Ignorable="d"
-        Title="Лабораторная работа №10" Height="440.001" Width="376" SizeToContent="WidthAndHeight">
+        Title="Лабораторная работа №10" Height="440.001" Width="376" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Background="AliceBlue" Margin="10,10,10,0" TextWrapping="Wrap" Text="Написать программу которая позволяет просматривать иерархию выбранной папки (с файлами), предусмотреть возможность добавления нового файла и папки а также удаления." VerticalAlignment="Top"/>
+        <TextBlock Width="350" Background="AliceBlue" Margin="10,10,10,0" TextWrapping="Wrap" Text="Написать программу которая позволяет просматривать иерархию выбранной папки (с файлами), предусмотреть возможность добавления нового файла и папки а также удаления." VerticalAlignment="Top"/>
         <TextBox x:Name="TextBox_Path" Height="23" Margin="10,110,10,0" TextWrapping="Wrap" Text="C:\Users\Usver\source\repos\WpfApp_Labs\bin\Debug" VerticalAlignment="Top"/>
         <Button Content="Выбрать директорию" Margin="10,138,10,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Label x:Name="Label" Content="Введите путь к директории" Margin="10,79,10,0" VerticalAlignment="Top"/>

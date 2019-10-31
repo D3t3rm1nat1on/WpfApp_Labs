@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_7"
         mc:Ignorable="d"
-        Title="Dialog_Window" Height="86" Width="208">
+        Title="Dialog_Window" Height="86" Width="208" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid>
         <Label Content="Считать содержимое картотеки?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0"/>
         <Button x:Name="Button_Yes" Content="Да" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="88" Click="Button_Yes_Click"/>

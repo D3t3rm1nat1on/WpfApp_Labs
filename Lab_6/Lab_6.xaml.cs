@@ -27,8 +27,10 @@ namespace WpfApp_Labs.Lab_6
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (int.TryParse(TextBox.Text, out int n))
+            // Проверка - является ли строка натуральным числом
+            if (int.TryParse(TextBox.Text, out int n) && n > 0)
             {
+                // Проверка на полиндром (идем посимвольно, т.к. может начинаться с 0)
                 string str = TextBox.Text.Trim();
                 for (int i = 0; i <= str.Length / 2; i++)
                 {
@@ -38,6 +40,7 @@ namespace WpfApp_Labs.Lab_6
                         return;
                     }
                 }
+                // Вызов диалога подтверждения записи в файл
                 Dialog_window window = new Dialog_window();
                 if (window.ShowDialog() == true)
                 {

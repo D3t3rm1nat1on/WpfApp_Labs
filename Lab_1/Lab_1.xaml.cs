@@ -27,6 +27,7 @@ namespace WpfApp_Labs.Lab_1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int a, b;
+            // Проверка на числовое значение строк в текстбоксах
             if(int.TryParse(TextBox1.Text, out a) && int.TryParse(TextBox2.Text, out b))
             {
                 Label.Content = Function.Lab_1(a, b);

@@ -26,15 +26,22 @@ namespace WpfApp_Labs.Lab_10
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string path = TextBox_Path.Text.Trim().Trim('\\');
-            Grid_Directory.Children.Clear();                                    // ради удаления последнего элемента
+            string path = TextBox_Path.Text.Trim().TrimEnd('\\');
+
+            // Очистка таблицы
+            Grid_Directory.Children.Clear();
             Grid_Directory.RowDefinitions.Clear();
+
             if (Directory.Exists(path))
             {
+                // Индекс для размещения элементов в нужной строке
                 int idx = 0;
+                // Показываем путь, который ввел пользователь
                 Label.Content = path;
+                // Переменная хранящая информацию о директории (включая папки и файлы)
                 DirectoryInfo info = new DirectoryInfo(path);
 
+                // Разделитель таблицы для вложенных папок
                 TextBlock textBlock = new TextBlock();
                 textBlock.Text = "Вложенные папки";
                 textBlock.TextAlignment = TextAlignment.Center;
@@ -44,17 +51,20 @@ namespace WpfApp_Labs.Lab_10
                 Grid_Directory.Children.Add(textBlock);
                 Grid.SetRow(textBlock, idx++);
 
+                // Добавление в таблицу названий вложенных папок
                 foreach (var item in info.GetDirectories())
                 {
+                    // Создание новой строки в таблице
                     Grid_Directory.RowDefinitions.Add(new RowDefinition());
-                    TextBlock file_textBlock = new TextBlock();
-                    file_textBlock.Text = item.Name;
-                    file_textBlock.TextAlignment = TextAlignment.Center;
-                    file_textBlock.Background = Brushes.Beige;
-                    Grid_Directory.Children.Add(file_textBlock);
-                    Grid.SetRow(file_textBlock, idx++);
+                    TextBlock dir_textBlock = new TextBlock();
+                    dir_textBlock.Text = item.Name;
+                    dir_textBlock.TextAlignment = TextAlignment.Center;
+                    dir_textBlock.Background = Brushes.Beige;
+                    Grid_Directory.Children.Add(dir_textBlock);
+                    Grid.SetRow(dir_textBlock, idx++);
                 }
 
+                // Разделитель таблицы для вложенных файлов
                 textBlock = new TextBlock();
                 textBlock.Text = "Вложенные файлы";
                 textBlock.TextAlignment = TextAlignment.Center;
@@ -64,8 +74,10 @@ namespace WpfApp_Labs.Lab_10
                 Grid_Directory.Children.Add(textBlock);
                 Grid.SetRow(textBlock, idx++);
 
+                // Добавление в таблицу названий вложенных файлов
                 foreach (var item in info.GetFiles())
                 {
+                    // Создание новой строки в таблице
                     Grid_Directory.RowDefinitions.Add(new RowDefinition());
                     TextBlock file_textBlock = new TextBlock();
                     file_textBlock.Text = item.Name;
@@ -75,6 +87,7 @@ namespace WpfApp_Labs.Lab_10
                     Grid.SetRow(file_textBlock, idx++);
                 }
 
+                // Делает видимой таблицу с действиями (удаление, создание)
                 Grid_Actions.Visibility = Visibility.Visible;
             }
             else
@@ -82,10 +95,14 @@ namespace WpfApp_Labs.Lab_10
                 Label.Content = "Ошибка ввода";
                 Grid_Actions.Visibility = Visibility.Collapsed;
             }
+            // Подстраивает размер окна под содержимое
+            this.SizeToContent = SizeToContent.WidthAndHeight;
         }
 
+        // Удаляет папку или файл, в зависимости от введенного имени
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
+            // Функция содержит в себе проверку на удаление папки или файла (это важно)
             string path = $"{Label.Content}\\{TextBox_Delete.Text.Trim()}";
             if (Directory.Exists(path))
                 Directory.Delete(path);
@@ -100,6 +117,7 @@ namespace WpfApp_Labs.Lab_10
             Button_Click(sender, e);
         }
 
+        // Добавляет файл с указанным именем (если такого файла еще нет)
         private void Button_AddFile_Click(object sender, RoutedEventArgs e)
         {
             string path = $"{Label.Content}\\{TextBox_AddFile.Text.Trim()}";
@@ -115,6 +133,7 @@ namespace WpfApp_Labs.Lab_10
             Button_Click(sender, e);
         }
 
+        // Добавляет директорию с указанным именем (если такой директории еще нет)
         private void Button_AddDirectory_Click(object sender, RoutedEventArgs e)
         {
             string path = $"{Label.Content}\\{TextBox_AddDirectory.Text.Trim()}";

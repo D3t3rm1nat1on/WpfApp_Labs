@@ -109,9 +109,10 @@ namespace WpfApp_Labs
             int max = Math.Max(a, b);
             int min = Math.Max(0, Math.Min(a, b));
 
-            for (int i = min; i <= max; i += 4)
+            for (int i = min; i <= max; i++)
             {
-                sum += i;
+                if (i % 4 == 0)
+                    sum += i;
             }
 
             return sum.ToString();

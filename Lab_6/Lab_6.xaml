@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_6"
         mc:Ignorable="d"
-        Title="Лабораторная работа №6" Height="275" Width="376">
+        Title="Лабораторная работа №6" Height="275" Width="376" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Дано натуральное число n. Определить является ли оно палиндромом (перевертышем). Например, палиндромами являются следующие числа: 1111, 6116, 0440. Если да то вывести диалог сохранения в файл результата, иначе - сообщение об ошибке." VerticalAlignment="Top" Width="348" Margin="10,10,0,0"/>
-        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="44" Margin="10,96,0,0" TextWrapping="Wrap" Text="Число" VerticalAlignment="Top" Width="348" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Вывести результат" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
-        <Label x:Name="Label" Content="Результат" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,188,0,0" Width="348" HorizontalContentAlignment="Center" Height="32"/>
+        <TextBlock Background="AliceBlue" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Дано натуральное число n. Определить является ли оно палиндромом (перевертышем). Например, палиндромами являются следующие числа: 1111, 6116, 0440. Если да то вывести диалог сохранения в файл результата, иначе - сообщение об ошибке." VerticalAlignment="Top" Width="348" Margin="10,10,10,0"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="44" Margin="10,96,10,0" TextWrapping="Wrap" Text="Число" VerticalAlignment="Top" Width="348" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Вывести результат" HorizontalAlignment="Left" Margin="10,145,10,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
+        <Label x:Name="Label" Content="Результат" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,188,10,0" Width="348" HorizontalContentAlignment="Center" Height="32"/>
 
     </Grid>
 </Window>

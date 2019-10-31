@@ -30,11 +30,13 @@ namespace WpfApp_Labs.Lab_2
         {
             
             string str = TextBox.Text.Trim();
+            // Проверяем все ли символы в строке это числа
             if (!str.Any(char.IsDigit))
             {
                 Label.Content = "Ошибка ввода";
                 return;
             }
+            // Удаляем лишние пробелы из строки на случай для корректности парсинга
             while (str.Contains("  "))
             {
                 str = str.Replace("  ", " ");
@@ -45,6 +47,7 @@ namespace WpfApp_Labs.Lab_2
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+            // Позволяет вводить только числовые значения
             e.Handled = (!char.IsDigit(e.Text, 0));
         }
     }

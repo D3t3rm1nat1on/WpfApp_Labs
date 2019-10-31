@@ -20,8 +20,11 @@ namespace WpfApp_Labs.Lab_9
     /// </summary>
     public partial class Lab_9 : Window
     {
-        List<StackPanel> comboBoxItems = new List<StackPanel>();
-        List<Image> show_images = new List<Image>();
+        // Массив панелей, которые будет содержать ComboBox
+        List<StackPanel> list_StackPanels = new List<StackPanel>();
+        // Дополнительный повторяющийся массив картинок, т.к. из StackPanel вытащить картинку не получится
+        List<Image> list_images = new List<Image>();
+
         public Lab_9()
         {
             InitializeComponent();
@@ -29,48 +32,66 @@ namespace WpfApp_Labs.Lab_9
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            show_images.Clear();
+            list_images.Clear();
             Dialog_Window dialog = new Dialog_Window();
             if (dialog.ShowDialog() == true)
             {
-                comboBoxItems.Clear();
-                show_images.Clear();
+                MessageBox.Show("Корректный путь");
+
+                // Очистка заполняемых полей
+                list_StackPanels.Clear();
+                list_images.Clear();
                 Image.Source = null;
-                ComboBox_Images.ItemsSource = null;
-                ComboBox_Images.Items.Clear();
+                ComboBox.ItemsSource = null;
+                ComboBox.Items.Clear();
 
                 string path = dialog.TextBox_Path.Text;
-                MessageBox.Show("Корректный путь");
-                string[] images_paths = Directory.GetFiles(path, "*jpg", SearchOption.TopDirectoryOnly);
-                foreach (var iamge_path in images_paths)
+                
+                // Добавляем путь к каждой картинке в массив
+                List<string> images_paths = Directory.GetFiles(path, "*jpg", SearchOption.TopDirectoryOnly).ToList();
+                images_paths.AddRange(Directory.GetFiles(path, "*jpeg", SearchOption.TopDirectoryOnly).ToList());
+                images_paths.AddRange(Directory.GetFiles(path, "*gif", SearchOption.TopDirectoryOnly).ToList());
+                images_paths.AddRange(Directory.GetFiles(path, "*png", SearchOption.TopDirectoryOnly).ToList());
+
+                // Обрабатываю каждую картинку
+                foreach (var image_path in images_paths)
                 {
+                    // TextBlock нужен для отображения названия изображения
                     TextBlock textBlock = new TextBlock();
-                    textBlock.Text = iamge_path.Substring(iamge_path.LastIndexOf('\\') + 1);
+                    textBlock.Text = image_path.Substring(image_path.LastIndexOf('\\') + 1);
 
                     Image temp_image = new Image();
-                    temp_image.Source = new BitmapImage(new Uri(iamge_path));
-                    show_images.Add(temp_image);
+                    // Получение ресурса изображений (самой картинки для элемента Image)
+                    temp_image.Source = new BitmapImage(new Uri(image_path));
+                    list_images.Add(temp_image);
+                    // Установка маленькой ширины картинки (для нормального отображения в ComboBox'е)
                     temp_image.Width = 60;
 
+                    // Добавление изображения с его названием в панель
                     StackPanel stackPanel = new StackPanel();
                     stackPanel.Children.Add(temp_image);
                     stackPanel.Children.Add(textBlock);
-                    comboBoxItems.Add(stackPanel);
+                    list_StackPanels.Add(stackPanel);
                 }
 
-                ComboBox_Images.ItemsSource = comboBoxItems;
+                // Используем список с панелями как элементы ComboBox'а
+                ComboBox.ItemsSource = list_StackPanels;
             }
             else
             {
                 MessageBox.Show("Неверный путь");
             }
+
+            // Подстройка размеров окна под содержимое
+            this.SizeToContent = SizeToContent.WidthAndHeight;
         }
 
-        private void ComboBox_Images_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // При выборе картинки в ComboBox'е она отобразится на форме
             ComboBox comboBox = (ComboBox)sender;
             if (comboBox.SelectedIndex > -1)
-                Image.Source = show_images[comboBox.SelectedIndex].Source;
+                Image.Source = list_images[comboBox.SelectedIndex].Source;
 
         }
     }

@@ -20,25 +20,35 @@ namespace WpfApp_Labs.Lab_8
     /// </summary>
     public partial class Lab_8 : Window
     {
+        // Массивы для вопросов и вариантов ответа
         List<string> questions = new List<string>();
         List<List<string>> answers = new List<List<string>>();
+
+        // Массивы для вопросов и вариантов ответа, идущих в случайном порядке
         List<string> random_questions = new List<string>();
         List<List<string>> random_answers = new List<List<string>>();
+
         int score = 0;
+        int kolvo_voprosov = 0;
+
         public Lab_8()
         {
             InitializeComponent();
-            // Чтение вопросов и ответов из файлов
+            // Потоки для чтения вопросов и вариантов ответа из файлов
             StreamReader q_reader = new StreamReader("Вопросы.txt");
             StreamReader a_reader = new StreamReader("Ответы.txt");
-            for (int i = 0; i < 15; i++)
+            // Получаем из файла количество вопросов
+            kolvo_voprosov = int.Parse(new StreamReader("Количество вопросов.txt").ReadToEnd().Trim());
+            for (int i = 0; i < kolvo_voprosov; i++)
             {
+                // Каждый и ответ в файлах лежит внутри ковычек " "
                 questions.Add(q_reader.ReadLine().Trim().Trim('"'));
                 List<string> temp = a_reader.ReadLine().Trim().Split('"').ToList(); ;
                 temp.RemoveAll(stroka => stroka.Trim() == "");
                 answers.Add(temp);
             }
 
+            // Вызов функции для перетосовки порядка вопросов
             Randomly_Sort();
 
         }
@@ -48,10 +58,13 @@ namespace WpfApp_Labs.Lab_8
         /// </summary>
         private void Randomly_Sort()
         {
+            // Очистка списка, нужна при повторном вызове функции
             random_answers.Clear();
             random_questions.Clear();
+
             var random = new Random();
-            var range = Enumerable.Range(1, 15);
+            var range = Enumerable.Range(1, kolvo_voprosov);
+            // OrderBy отсортирует числа в случайном порядке из-за random.Next()
             range = range.OrderBy(k => random.Next());
             foreach (var item in range.ToList())
             {

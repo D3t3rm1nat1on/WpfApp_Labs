@@ -24,26 +24,41 @@ namespace WpfApp_Labs.Lab_7
         {
             InitializeComponent();
         }
-
+        
+        // Массив текстбоксов, которые будут вставляться в таблицу (создаем его вне функций для возможности обращения к нему из них)
         TextBox[,] textBoxes;
+        // Массив полей, считанных из файла
         List<List<string>> list;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // Очистка таблицы от полей со студентами (название столбцов не трогаем)
+            if (Stud_Grid.RowDefinitions.Count > 1)
+            {
+                // Первые пять Children'ов это названия столбцов, созданных в конструкторе WPF, их трогать не нужно
+                Stud_Grid.Children.RemoveRange(5, Stud_Grid.Children.Count - 5);
+                // Удаляем все строки кроме 1й, поэтому не Clear()
+                Stud_Grid.RowDefinitions.RemoveRange(1, Stud_Grid.RowDefinitions.Count - 1);
+            }
+
+            // Вызов диалога подтверждения считывания карточек студентов из файла
             Dialog_Window window = new Dialog_Window();
             if (window.ShowDialog() == true)
             {
-                //Парсинг строк файла в List
+                // присваеваем переменной list конструктор (т.к. до этого list == null)
                 list = new List<List<string>>();
                 StreamReader reader = new StreamReader("students.txt");
                 string str;
+                // Записываем каждую не пустую карточку (строку)
                 while ((str = reader.ReadLine()) != null)
                 {
+                    // Специфичный парсинг строки. Split('"') и RemoveAll потому, что каждая запись хранится внутри ковычек ==> "Имя" "Пол" и т.д.
                     List<string> temp = str.Trim().Split('"').ToList();
                     temp.RemoveAll(stroka => stroka.Trim() == "");
                     list.Add(temp);
                 }
                 reader.Close();
 
+                // Создание таблицы (пока пустой)
                 for (int i = 1; i <= list.Count; i++)
                 {
                     // каждую итерацию указываю на новый конструктор, ибо при попытке впихнуть один элемент не может быть в разных частях окна WPF
@@ -58,11 +73,11 @@ namespace WpfApp_Labs.Lab_7
                         Stud_Grid.ColumnDefinitions.Add(columnDefinition);
                     }
                 }
-
+                
+                // Задаем необходимое количество textBox'ов
                 textBoxes = new TextBox[list.Count, 5];
 
-
-
+                // Запись результата в таблицу
                 for (int i = 0; i < list.Count; i++)
                 {
                     for (int j = 0; j < 5; j++)
@@ -76,8 +91,6 @@ namespace WpfApp_Labs.Lab_7
                         Grid.SetColumn(textBoxes[i, j], j);
                     }
                 }
-                this.SizeToContent = SizeToContent.WidthAndHeight;
-
 
                 MessageBox.Show("Успешная чтение из\n" + Environment.CurrentDirectory + "\\sutents.txt");
             }
@@ -85,20 +98,25 @@ namespace WpfApp_Labs.Lab_7
             {
                 MessageBox.Show("Ну как хотите");
             }
+
+            // После изменения размера внутренних элементов, размеры окна подстроятся
+            this.SizeToContent = SizeToContent.WidthAndHeight;
         }
 
         public void Save_Click(object sender, RoutedEventArgs e)
         {
+            // Проверяем есть ли что сохранять
             if (textBoxes == null)
             {
-                Label_Debug.Content = "Нечего сохранять";
+                MessageBox.Show("Нечего сохранять");
             }
             else
             {
-                StreamWriter writer = new StreamWriter("students.txt", false);
+                StreamWriter writer = new StreamWriter("students.txt", false); // false для перезаписи файла
                 for (int i = 0; i < list.Count; i++)
                 {
                     string line = null;
+                    // Запись в формате "фио" "возраст" "пол" "специальность" "курс"
                     for (int j = 0; j < 5; j++)
                     {
                         line += $"\"{textBoxes[i, j].Text}\" ";
@@ -107,13 +125,15 @@ namespace WpfApp_Labs.Lab_7
                 }
 
                 writer.Close();
-                Label_Debug.Content = "Сохранение прошло успешно";
+                MessageBox.Show("Сохранение прошло успешно");
             }
         }
 
         private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Вы уверены?", "Закрытие формы", System.Windows.MessageBoxButton.YesNo);
+            // По закрытию формы запрашиваем у пользователя подтверждение
+            // 1) Текст в окне   2 )Название окна   3) Кнопки "Да" и "Нет"
+            MessageBoxResult messageBoxResult = MessageBox.Show("Вы уверены?", "Закрытие формы", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
                 e.Cancel = false;
             else

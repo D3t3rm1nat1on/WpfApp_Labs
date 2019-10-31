@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_5"
         mc:Ignorable="d"
-        Title="Лабораторная работа №5" Height="304" Width="376">
+        Title="Лабораторная работа №5" Height="304" Width="376" SizeToContent="WidthAndHeight">
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Сумма цифр трехзначного числа кратна 7, само число также делиться на 7. Найти все такие числа и вывести их внутри TableLayoutPanel." Width="348" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Button" Content="Вывести результат" Margin="10,63,0,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
+        <TextBlock Background="AliceBlue" TextWrapping="Wrap" Width="348" Text="Сумма цифр трехзначного числа кратна 7, само число также делиться на 7. Найти все такие числа и вывести их внутри TableLayoutPanel." Margin="10,10,10,0" VerticalAlignment="Top"/>
+        <Button x:Name="Button" Content="Вывести результат" Margin="10,63,10,0" VerticalAlignment="Top" Width="348" Height="38" Click="Button_Click"/>
         <Grid Width="auto" Margin="10,106,10,10" ShowGridLines="True" x:Name="ResultGrid">
             <Grid.RowDefinitions>
             </Grid.RowDefinitions>

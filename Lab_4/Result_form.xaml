@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Labs.Lab_4"
         mc:Ignorable="d"
-        Title="Результат" Height="100" Width="250">
+        Title="Результат" Height="100" Width="250" SizeToContent="WidthAndHeight">
     <Grid>
         <Label x:Name="Label" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="49" Width="222" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 

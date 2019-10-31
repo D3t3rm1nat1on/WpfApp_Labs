@@ -28,8 +28,9 @@ namespace WpfApp_Labs.Lab_3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string res = null;
+            string res;
             int n;
+            // Проверка - является ли строка натуральным числом
             if (int.TryParse(TextBox.Text, out n) && n > 0)
             {
                 res = Function.Lab_3(n);
@@ -43,12 +44,13 @@ namespace WpfApp_Labs.Lab_3
 
 
             Dialog_Window window = new Dialog_Window();
-
+            
+            // Диалог согласия записи в файл 
             if (window.ShowDialog() == true)
             {
                 StreamWriter writer = new StreamWriter("output.txt");
                 writer.Write(res);
-                MessageBox.Show("Успешная запись в" + Environment.CurrentDirectory + "\\output.txt");
+                MessageBox.Show("Успешная запись в\n" + Environment.CurrentDirectory + "\\output.txt");
                 writer.Close();
             }
             else
