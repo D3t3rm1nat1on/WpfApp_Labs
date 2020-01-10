@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -103,13 +104,13 @@ namespace WpfApp_Labs
     /// </summary>
     public static class Function
     {
-        public static string Lab_1(int a, int b)
+        public static string Lab_1(BigInteger a, BigInteger b)
         {
-            int sum = 0;
-            int max = Math.Max(a, b);
-            int min = Math.Max(0, Math.Min(a, b));
+            BigInteger sum = 0;
+            BigInteger max = BigInteger.Max(a, b);
+            BigInteger min = BigInteger.Max(0, BigInteger.Min(a, b));
 
-            for (int i = min; i <= max; i++)
+            for (BigInteger i = min; i <= max; i++)
             {
                 if (i % 4 == 0)
                     sum += i;

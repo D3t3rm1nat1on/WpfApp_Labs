@@ -8,7 +8,7 @@
         Title="Лабораторная работа №11" Height="440.001" Width="376" SizeToContent="WidthAndHeight">
     <Grid>
         <TextBlock Background="AliceBlue" Margin="10,10,10,0" TextWrapping="Wrap" Text="Написать веб браузер с сохранением истории посещений сайтов и возможностью вернуться назад и вперед. Добавить возможность определять присутствует ли в полученной странице javascript-код." VerticalAlignment="Top"/>
-        <WebBrowser x:Name="WebBrowser" Height="auto" Margin="10,79,10,10" Width="auto"/>
+        <WebBrowser x:Name="WebBrowser" Height="auto" Margin="10,79,10,10" Width="auto" Navigated="WebBrowser_Navigated"/>
 
     </Grid>
 </Window>

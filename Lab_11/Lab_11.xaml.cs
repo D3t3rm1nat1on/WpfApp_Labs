@@ -23,6 +23,13 @@ namespace WpfApp_Labs.Lab_11
         {
             InitializeComponent();
             WebBrowser.Navigate("http://google.com");
+            List<string> history = new List<string>() { "http://google.com" };
         }
+
+        private void WebBrowser_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+            MessageBox.Show("Navigated");
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,9 +27,9 @@ namespace WpfApp_Labs.Lab_1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int a, b;
+            BigInteger a, b;
             // Проверка на числовое значение строк в текстбоксах
-            if(int.TryParse(TextBox1.Text, out a) && int.TryParse(TextBox2.Text, out b))
+            if(BigInteger.TryParse(TextBox1.Text, out a) && BigInteger.TryParse(TextBox2.Text, out b))
             {
                 Label.Content = Function.Lab_1(a, b);
             }

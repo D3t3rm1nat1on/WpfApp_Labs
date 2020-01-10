@@ -32,10 +32,12 @@ namespace WpfApp_Labs.Lab_9
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            list_images.Clear();
             Dialog_Window dialog = new Dialog_Window();
             if (dialog.ShowDialog() == true)
             {
+                list_images.Clear();
+                ComboBox.ItemsSource = null;
+
                 MessageBox.Show("Корректный путь");
 
                 // Очистка заполняемых полей
